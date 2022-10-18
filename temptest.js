@@ -17,13 +17,13 @@ function rgbToHex(r, g, b) {
 
 elements.tmptst = {
     color: "#000000",
-    behavior: behaviors.SOLID,
+    behavior: behaviors.LIQUID,
     category: "liquids",
     viscosity: 100000,
     state: "liquid",
     density: 720,
 };
 
-behaviors.tempspawn.tick = function(pixel) {
+behaviors.tmptst.tick = function(pixel) {
   pixel.color = rgbToHex(scale(pixel.temp, teVs.min, teVs.max, 0, 255), 0, 0)
 };
