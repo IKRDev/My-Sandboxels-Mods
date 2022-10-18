@@ -15,7 +15,7 @@ function rgbToHex(r, g, b) {
   return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
 }
 
-elements.tempspawn {
+elements.tempspawn = {
     color: "#000000",
     behavior: behaviors.WALL,
     category: "special",
