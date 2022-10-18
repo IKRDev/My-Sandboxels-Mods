@@ -15,12 +15,14 @@ function rgbToHex(r, g, b) {
   return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
 }
 
-elements.tempspawn = {
+elements.tmptst = {
     color: "#000000",
-    behavior: behaviors.WALL,
-    category: "special",
-    state: "solid"
-}
+    behavior: behaviors.SOLID,
+    category: "liquids",
+    viscosity: 100000,
+    state: "liquid",
+    density: 720,
+};
 
 behaviors.tempspawn.tick = function(pixel) {
   pixel.color = rgbToHex(scale(pixel.temp, teVs.min, teVs.max, 0, 255), 0, 0)
